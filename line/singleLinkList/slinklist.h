@@ -1,6 +1,13 @@
+typedef struct node * Node;
+Node head;
+
+struct node {
+     void * val;
+     Node next; 
+};
 
 //create a single link list 
-extern int create_single_link();
+extern int init_single_link();
 
 //free a single link list
 extern int free_single_link();
@@ -13,13 +20,13 @@ extern int slink_size();
 
 
 //get single link of element by index
-extern void* slink_get_index(int index);
+extern Node slink_get_index(int index);
 
 //get single link of element  first
-extern void* slink_get_first();
+extern Node slink_get_first();
 
 //get single link og element last
-extern void* slink_get_last();
+extern Node slink_get_last();
 
 //insert a element into single link by index success return 0 failed return -1
 extern int slink_insert(int index, void *val);
