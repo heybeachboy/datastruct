@@ -1,5 +1,5 @@
 typedef struct node * Node;
-Node head;
+static Node head;
 
 struct node {
      void * val;
@@ -7,7 +7,7 @@ struct node {
 };
 
 //create a single link list 
-extern int init_single_link();
+extern int init_single_link(void *val);
 
 //free a single link list
 extern int free_single_link();
