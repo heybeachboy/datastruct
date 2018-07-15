@@ -5,24 +5,23 @@
  * c langauge for single link list 
  *
  */
+static Node head;
 
 static Node init_node(void * v)
 {
     Node p;
     p = (Node)malloc(sizeof(struct node));
-    p ->val = v;  
+    if(!p) return NULL;
+    p->val = v;  
     return p;    
 }	
 
 
 int init_single_link(void * v)
 {
-    if(head->val == NULL && head->next == NULL) {
-	    head->val = v;
-	    return 0;
-        	    
-    }
-
+    	
+    head = init_node(v);
+    head->next = NULL;
     return -1;    
 
 }
@@ -102,7 +101,7 @@ Node slink_get_last()
 
 int slink_insert(int index,void *val)
 {
-    int count = 0;
+    int count = 1;
     Node p,q;
     p = head;
     q = init_node(val);

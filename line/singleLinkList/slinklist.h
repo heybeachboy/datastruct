@@ -1,8 +1,10 @@
+#ifndef _SINGLE_LINK_H
+#define _SINGLE_LINK_H
+
 typedef struct node * Node;
-static Node head;
 
 struct node {
-     void * val;
+     void* val;
      Node next; 
 };
 
@@ -46,5 +48,4 @@ extern int slink_delete_first();
 //delete an element from single link list at last; success 0 failed return -1
 extern int slink_delete_last();
 
-
-
+#endif

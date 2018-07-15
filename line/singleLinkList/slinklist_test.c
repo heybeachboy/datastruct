@@ -2,16 +2,15 @@
 #include <string.h>
 #include "slinklist.h"
 
-typedef struct value {
-        int id;
-	char var[2]; 
-
-}*Val;
-
 int main() {
-    int arr[4] = {11,22,33,44};    	
-    init_single_link(&arr[0]);
-    slink_insert(2,&arr[1]);
-    slink_insert(3,&arr[2]);
-    slink_insert(4,&arr[3]);
+    Node h;	
+    int arr[4] = {11111,22,33,44};
+    int *v1 = 3333;
+    int *v2 = 566;    
+    init_single_link(&arr[3]);
+    h = slink_get_first();
+    slink_insert(2,v1);
+    slink_insert(3,v2);
+    h = slink_get_index(3);
+    printf("this first value:%d\n",h->val);
 }    
