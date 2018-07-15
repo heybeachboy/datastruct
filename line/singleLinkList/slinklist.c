@@ -31,7 +31,7 @@ int free_single_link()
 {
    Node p = head;
    
-   while(p != null)
+   while(p != NULL)
    {
        Node q;
        q = p;
@@ -110,7 +110,7 @@ int slink_insert(int index,void *val)
     while(p != NULL)
     {
          count++;
-	 if(counct == index)
+	 if(count == index)
          {
              Node temp = p->next;
 	     p->next = q;
@@ -152,7 +152,7 @@ int slink_insert_tail(void * val)
 
 }
 
-int slink_delete(index int)
+int slink_delete(int index)
 {
     Node p,q;
     p = head;
@@ -160,7 +160,7 @@ int slink_delete(index int)
 
     if(index == 1)
     {
-	slink_delete_fiest();    
+	slink_delete_first();    
         return 0;	
     }	    
 
@@ -181,7 +181,7 @@ int slink_delete(index int)
     return 0;
 }
 
-int slink_delete_fisrt()
+int slink_delete_first()
 {
     Node p = head;
     head = p->next;
