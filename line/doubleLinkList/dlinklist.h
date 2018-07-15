@@ -29,7 +29,7 @@ extern int AppendElementToHead(void * val);
 extern int AppendElementToTail(void * val);
 
 //remove element from double link list result : success 0 failed -1
-extern int RemoveElement(int postion,void * val);
+extern int RemoveElement(int postion);
 
 //remove element of double link list at first;result 0 failed -1
 extern int RemoveElementAtFirst();
