@@ -10,6 +10,7 @@
 typedef struct Element {
 	int id;
 	char *name[];
+	pEle next;
 }*pEle,Ele;
 
 //create a data stack; result success : 0;failed : -1
@@ -18,7 +19,7 @@ extern int InitStack(int size);
 //add element to stack; successfull return 0 failed return -1
 extern int Push(pEle e);
 //delete element from stack; successfull return 0; failed returnn -1
-extern int Pop(int id);
+extern int Pop();
 
 //rerturn stack element
 extern pEle Peek();
