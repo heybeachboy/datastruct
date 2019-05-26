@@ -1,0 +1,66 @@
+*.tar.gz
+
+*.exe
+config.log
+config.status
+configure
+libtool
+.deps
+.dirstamp
+.libs
+.*.swp
+*.*~*
+*.bak
+*.rej
+*.orig
+*.pyc
+*.o
+*.o-*
+*.a
+*.pb.cc
+*.pb.h
+*.dat
+
+*.log
+*.trs
+*.dmg
+
+*.json.h
+*.raw.h
+
+# Only ignore unexpected patches
+*.patch
+*.lo
+*.la
+*.qm
+Makefile
+# Unit-tests
+Makefile.test
+
+# Resources cpp
+qrc_*.cpp
+
+# Mac specific
+.DS_Store
+build
+
+#lcov
+*.gcno
+*.gcda
+/*.info
+test_bitcoin.coverage/
+total.coverage/
+coverage_percent.txt
+
+#build tests
+linux-coverage-build
+linux-build
+win32-build
+test/config.ini
+test/cache/*
+cmake-build-debug
+# Output from running db4 installation
+db4/
+
+# clang-check
+*.plist
